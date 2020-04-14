@@ -42,11 +42,11 @@ export default function reducer(state = initialState, action){
       return {...state, ...action.payload, loading: false}
     case ADD_PURCHASE + '_PENDING':
       return {...state, loading: true}
-    case ADD_PURCHASE = '_FULFILLED':
+    case ADD_PURCHASE + '_FULFILLED':
       return {...state, ...action.payload, loading: false}
     case REMOVE_PURCHASE + '_PENDING':
       return {...state, loading: true}
-    case REMOVE_PURCHASE = '_FULFILLED':
+    case REMOVE_PURCHASE + '_FULFILLED':
       return {...state, ...action.payload, loading: false}
     default:
       return state
